@@ -5,14 +5,19 @@ import { products, rawMaterials } from "../data/data";
 import Card from "../component/Card";
 import chicken from "../image/chicken.png";
 import industry from "../image/industry.png";
-import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
-
+import { useNavigate } from "react-router-dom";
+import ContactForm from "../component/ContactForm";
 //motion
 import { motion } from "framer-motion";
 //variants
 import { fadeIn } from "../variants";
 
+
 const Home = () => {
+  const navigate = useNavigate();
+   // Show only the first three products
+   const limitedProducts = products.slice(0, 3);
+
   // Variants for animation
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -92,6 +97,9 @@ const Home = () => {
           <h2 className="text-2xl font-bold text-black mb-4">
             What <span className="text-primary">We Sell</span>
           </h2>
+          <h2 className="text-xl font-semibold text-black mb-4">
+            Products
+          </h2>
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -113,11 +121,11 @@ const Home = () => {
           viewport={{ once: false, amount: 0.4 }}
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
         >
-          {products.map((product, index) => (
-            <motion.div key={index} variants={childVariants}>
-              <Card image={product.image} title={product.title} />
-            </motion.div>
-          ))}
+          {limitedProducts.map((product, index) => (
+          <motion.div key={index} variants={childVariants}>
+            <Card image={product.image} title={product.title} />
+          </motion.div>
+        ))}
         </motion.div>
         <motion.div
           variants={childVariants}
@@ -126,9 +134,12 @@ const Home = () => {
           viewport={{ once: false, amount: 0.4 }}
           className="text-center mt-8"
         >
-          <button className="px-6 py-2 bg-primary text-white rounded-full hover:bg-secondary transition">
-            View More
-          </button>
+         <button
+          onClick={() => navigate("/services")}
+          className="border px-6 py-2 bg-primary text-white rounded-full hover:bg-secondary transition hover:text-primary hover:border-solid hover:border-primary"
+        >
+          View More
+        </button>
         </motion.div>
 
         {/* Raw Materials Section */}
@@ -139,7 +150,7 @@ const Home = () => {
           viewport={{ once: false, amount: 0.4 }}
           className="text-center mt-16 mb-12"
         >
-          <h2 className="text-2xl font-bold text-primary mb-4">
+          <h2 className="text-xl font-semibold text-black mb-4">
             Raw Materials
           </h2>
           <p className="text-gray-600">
@@ -167,7 +178,10 @@ const Home = () => {
           viewport={{ once: false, amount: 0.4 }}
           className="text-center my-8"
         >
-          <button className="px-6 py-2 bg-primary text-white rounded-full hover:bg-secondary transition">
+          <button
+          onClick={() => navigate("/services")}
+          className="border px-6 py-2 bg-primary text-white rounded-full hover:bg-secondary transition hover:text-primary hover:border-solid hover:border-primary"
+        >
             View More
           </button>
         </motion.div>
@@ -322,102 +336,7 @@ const Home = () => {
         id="contact"
         className="h-auto bg-white flex justify-center items-center py-12"
       >
-<div className="bg-secondary grid grid-cols-1 lg:grid-cols-2 w-[90%] rounded-lg">
-  {/* Left Side - Contact Form */}
-  <div className="w-full p-8 flex flex-col justify-center">
-    <h2 className="text-4xl font-bold text-green-600">Get in <span className="text-black">Touch</span></h2>
-    <p className="text-gray-600 mt-4">
-      Please fill out the form below, and we’ll get back to you as soon as possible.
-    </p>
-    <form className="mt-6 space-y-4">
-      {/* Name Field */}
-      <div>
-        <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name *</label>
-        <input
-          type="text"
-          id="name"
-          placeholder="Enter your name"
-          className="w-full px-3 py-2 border rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
-        />
-      </div>
-      {/* Email Field */}
-      <div>
-        <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-        <input
-          type="email"
-          id="email"
-          placeholder="Enter your email"
-          className="w-full px-3 py-2 border rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
-        />
-      </div>
-      {/* Phone Field */}
-      <div>
-        <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone Number *</label>
-        <input
-          type="text"
-          id="phone"
-          placeholder="Enter your phone number"
-          className="w-full px-3 py-2 border rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
-        />
-      </div>
-      {/* Message Field */}
-      <div>
-        <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message *</label>
-        <textarea
-          id="message"
-          rows="4"
-          placeholder="Enter your message"
-          className="w-full px-3 py-2 border rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
-        ></textarea>
-      </div>
-      {/* Submit Button */}
-      <button
-        type="submit"
-        className="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700"
-      >
-        SEND
-      </button>
-    </form>
-    {/* Contact Info */}
-    <div className="flex flex-col sm:flex-row justify-between items-center mt-6 space-y-4 sm:space-y-0 sm:space-x-4 text-gray-800">
-  {/* Phone Info */}
-  <div className="flex items-center space-x-3">
-    <FaPhoneAlt className="text-green-600" size={20} />
-    <div className="flex lg:flex-col justify-center items-center lg:items-start gap-2">
-      <span className="block text-sm font-medium text-gray-600">Phone</span>
-      <span className="text-sm font-semibold text-green-600">+250 784 442 356</span>
-    </div>
-  </div>
-  {/* Email Info */}
-  <div className="flex items-center space-x-3">
-    <FaEnvelope className="text-green-600" size={20} />
-    <div className="flex lg:flex-col justify-center items-center lg:items-start gap-2">
-      <span className="block text-sm font-medium text-gray-600">Email</span>
-      <span className="text-sm font-semibold text-green-600">
-        kigalianimalfeedltd@gmail.com
-      </span>
-    </div>
-  </div>
-</div>
-  </div>
-
-  {/* Right Side - Map Section */}
-  <div className="w-full h-full bg-primary p-4 rounded-tl-none rounded-tr-lg rounded-br-lg rounded-bl-none">
-    <div className="w-full h-full rounded-lg overflow-hidden">
-    <iframe
-       title="Kigali Nyabugogo Map"
-      src="https://www.google.com/maps?q=-1.987729,30.11893&z=15&output=embed"
-      width="100%"
-      height="100%"
-      allowFullScreen=""
-      loading="lazy"
-      className="rounded-lg"
-    ></iframe>
-    </div>
-  </div>
-</div>
-
-
+     <ContactForm />
       </div>
 
       <div></div>

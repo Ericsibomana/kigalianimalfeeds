@@ -1,4 +1,5 @@
-import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import React from "react";
+import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
         {/* Section 1: Company Info */}
         <div className="w-full md:w-1/5">
           <h3 className="text-lg font-bold w-2/3">KIGALI ANIMAL FEEDS LTD</h3>
-          <p className="mt-4 text-sm w-2/3">
+          <p className="mt-4 text-sm w-[60%]">
             Transform Farming with Our Trusted Animal Feed Solutions
           </p>
         </div>
@@ -16,10 +17,10 @@ const Footer = () => {
         <div className="w-full md:w-1/5">
           <h3 className="text-lg font-bold">Navigation</h3>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><a href="#" className="hover:underline">Home</a></li>
-            <li><a href="#" className="hover:underline">Services</a></li>
-            <li><a href="#" className="hover:underline">About Us</a></li>
-            <li><a href="#" className="hover:underline">Contact Us</a></li>
+            <li><a href="/" className="hover:underline">Home</a></li>
+            <li><a href="/services" className="hover:underline">Services</a></li>
+            <li><a href="/about-us" className="hover:underline">About Us</a></li>
+            <li><a href="/contact-us" className="hover:underline">Contact Us</a></li>
           </ul>
         </div>
 
@@ -46,10 +47,10 @@ const Footer = () => {
         <div className="w-full md:w-1/5">
           <h3 className="text-lg font-bold">Learn More</h3>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><a href="#" className="hover:underline">General Info</a></li>
-            <li><a href="#" className="hover:underline">Jobs</a></li>
-            <li><a href="#" className="hover:underline">Private Policy</a></li>
-            <li><a href="#" className="hover:underline">Terms of Service</a></li>
+            <li><a href="/info" className="hover:underline">General Info</a></li>
+            <li><a href="/jobs" className="hover:underline">Jobs</a></li>
+            <li><a href="/policy" className="hover:underline">Privacy Policy</a></li>
+            <li><a href="/terms" className="hover:underline">Terms of Service</a></li>
           </ul>
         </div>
 
@@ -59,7 +60,9 @@ const Footer = () => {
           <div className="flex space-x-4 mt-4">
             {/* Facebook */}
             <a
-              href="#"
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-6 h-6 bg-white flex items-center justify-center rounded-md hover:bg-gray-200"
               aria-label="Facebook"
             >
@@ -67,7 +70,9 @@ const Footer = () => {
             </a>
             {/* Twitter */}
             <a
-              href="#"
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-6 h-6 bg-white flex items-center justify-center rounded-md hover:bg-gray-200"
               aria-label="Twitter"
             >
@@ -75,7 +80,9 @@ const Footer = () => {
             </a>
             {/* YouTube */}
             <a
-              href="#"
+              href="https://youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-6 h-6 bg-white flex items-center justify-center rounded-md hover:bg-gray-200"
               aria-label="YouTube"
             >
@@ -83,7 +90,9 @@ const Footer = () => {
             </a>
             {/* Instagram */}
             <a
-              href="#"
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-6 h-6 bg-white flex items-center justify-center rounded-md hover:bg-gray-200"
               aria-label="Instagram"
             >
