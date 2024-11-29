@@ -37,7 +37,7 @@ const Home = () => {
     <div>
       <motion.div
         id="home"
-        className="h-screen bg-cover bg-center relative flex items-center top-24"
+        className="h-screen bg-cover bg-center relative flex items-center top-10"
         style={{ backgroundImage: `url(${heroImage})` }} // Set background image
         animate={{ backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"] }}
         transition={{
@@ -320,7 +320,7 @@ const Home = () => {
       </div>
       <div
         id="contact"
-        className="h-auto bg-white flex justify-center items-center py-4"
+        className="h-auto bg-white flex justify-center items-center py-12"
       >
 <div className="bg-secondary grid grid-cols-1 lg:grid-cols-2 w-[90%] rounded-lg">
   {/* Left Side - Contact Form */}
