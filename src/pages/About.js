@@ -1,37 +1,49 @@
 import React from 'react'
 import Logo from "../image/kigalianimalfeeds.png"
+import AboutImage from "../image/about.png"
 
 const About = () => {
   return (
     <div
         id="about"
-        className="h-auto bg-white flex justify-center items-center py-16 px-6 md:px-16 lg:px-40 mt-20"
+        className="h-auto bg-white flex justify-center items-center py-16"
       >
      <div>
        {/* Title Section */}
-       <div className="mb-12 flex flex-col md:flex-row md:items-center md:gap-8 lg:gap-12">
-  {/* Logo Section */}
-  <img
-    src={Logo} // Replace with the path to your logo
-    alt="Kigali Animal Feeds Logo"
-    className="mx-auto mb-6 md:mb-0 md:mr-6 lg:mr-12 w-40"
-  />
+       <div
+  className="relative bg-cover bg-center text-white"
+  style={{ backgroundImage: `url(${AboutImage})` }}
+>
+  {/* Overlay for Opacity */}
+  <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
-  {/* Content Section */}
-  <div className="text-center md:text-left flex flex-col items-center md:items-start">
-    <h4 className="text-xl font-bold text-gray-800">
-      Welcome to Kigali Animal Feeds
-    </h4>
-    <p className="text-gray-600 mt-4 max-w-3xl w-11/12 sm:w-4/5">
-      Kigali Animal Feeds is one of the leading animal feed stores in Nyabugogo, the most convenient business site in Kigali. 
-      We are renowned for our unmatchable customer care, affordable, high-quality, and reliable animal feeds for optimum Meat, Eggs, and Milk production yields.
-    </p>
+  {/* Content */}
+  <div className="relative z-10 py-16 px-6 md:px-16 lg:px-40">
+    <div className="mb-12 flex flex-col md:flex-row md:items-center md:gap-8 lg:gap-12">
+      <img
+        src={Logo}
+        alt="Kigali Animal Feeds Logo"
+        className="mx-auto mb-6 md:mb-0 md:mr-6 lg:mr-12 w-40"
+      />
+      <div className='text-center md:text-left flex flex-col items-center md:items-start'>
+        <h1 className="text-xl font-bold text-white">
+          Welcome to Kigali Animal Feeds
+        </h1>
+        <p className="text-white mt-4 max-w-3xl w-11/12 sm:w-full">
+          Kigali Animal Feeds is one of the leading animal feed stores in
+          Nyabugogo, the most convenient business site in Kigali. We are
+          renowned for our unmatchable customer care, Affordable, high quality,
+          and reliable Animal feeds for optimum Meat, Eggs, and Milk production
+          yields.
+        </p>
+      </div>
+    </div>
   </div>
 </div>
 
 
       {/* Mission and Vision Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12 px-6 md:px-16 lg:px-40">
         <div className="bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-lg font-bold text-green-600">Our Mission</h2>
           <p className="italic text-gray-800 mt-2">
@@ -55,7 +67,7 @@ const About = () => {
       </div>
 
       {/* Features Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center px-6 md:px-16 lg:px-40">
         <div className="bg-[#0F67BA] bg-opacity-10 p-4 shadow-sm h-48">
           <h3 className="text-lg font-semibold text-gray-800">Experienced Team</h3>
           <p className="text-gray-600 mt-4">
