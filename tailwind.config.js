@@ -23,6 +23,9 @@ module.exports = {
           },
         },
       },
+      clipPath: {
+        'custom': 'polygon(0 0, 100% 0, 50% 100%, 0 85%)',
+      },
     },
   },
   plugins: [],
