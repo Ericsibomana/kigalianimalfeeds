@@ -7,7 +7,7 @@ const ContactForm = () => {
       <div className="bg-secondary grid grid-cols-1 lg:grid-cols-2 w-[90%] rounded-lg">
   {/* Left Side - Contact Form */}
   <div className="w-full p-8 flex flex-col justify-center">
-    <h2 className="text-4xl font-bold text-green-600">Get in <span className="text-black">Touch</span></h2>
+    <h2 className="text-4xl font-bold text-primary">Get in <span className="text-black">Touch</span></h2>
     <p className="text-gray-600 mt-4">
       Please fill out the form below, and we’ll get back to you as soon as possible.
     </p>
@@ -55,7 +55,7 @@ const ContactForm = () => {
       {/* Submit Button */}
       <button
         type="submit"
-        className="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700"
+        className="w-full bg-primary text-white py-2 rounded-lg hover:bg-green-700"
       >
         SEND
       </button>
@@ -67,7 +67,7 @@ const ContactForm = () => {
     <FaPhoneAlt className="text-green-600" size={20} />
     <div className="flex lg:flex-col justify-center items-center lg:items-start gap-2">
       <span className="block text-sm font-medium text-gray-600">Phone</span>
-      <span className="text-sm font-semibold text-green-600">+250 784 442 356</span>
+      <span className="text-sm font-semibold text-primary">+250 784 442 356</span>
     </div>
   </div>
   {/* Email Info */}
@@ -75,7 +75,7 @@ const ContactForm = () => {
     <FaEnvelope className="text-green-600" size={20} />
     <div className="flex lg:flex-col justify-center items-center lg:items-start gap-2">
       <span className="block text-sm font-medium text-gray-600">Email</span>
-      <span className="text-sm font-semibold text-green-600">
+      <span className="text-sm font-semibold text-primary">
         kigalianimalfeedltd@gmail.com
       </span>
     </div>
