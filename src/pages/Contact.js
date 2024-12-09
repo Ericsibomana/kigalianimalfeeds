@@ -6,7 +6,7 @@ import ContactForm from '../component/ContactForm';
 const Contact = () => {
   return (
     <div
-    id="about"
+    id="contact"
     className="h-auto bg-white flex justify-center items-center py-16 mt-8"
   >
  <div>

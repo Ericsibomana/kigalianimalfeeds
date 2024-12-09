@@ -66,7 +66,7 @@ const ContactForm = () => {
   <div className="flex items-center space-x-3">
     <FaPhoneAlt className="text-green-600" size={20} />
     <div className="flex lg:flex-col justify-center items-center lg:items-start gap-2">
-      <span className="block text-sm font-medium text-gray-600">Phone</span>
+      <span className="block text-sm font-medium text-gray-600">PHONE</span>
       <span className="text-sm font-semibold text-primary">+250 784 442 356</span>
     </div>
   </div>
@@ -74,7 +74,7 @@ const ContactForm = () => {
   <div className="flex items-center space-x-3">
     <FaEnvelope className="text-green-600" size={20} />
     <div className="flex lg:flex-col justify-center items-center lg:items-start gap-2">
-      <span className="block text-sm font-medium text-gray-600">Email</span>
+      <span className="block text-sm font-medium text-gray-600">EMAIL</span>
       <span className="text-sm font-semibold text-primary">
         kigalianimalfeedltd@gmail.com
       </span>
