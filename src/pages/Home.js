@@ -17,6 +17,7 @@ const Home = () => {
   const navigate = useNavigate();
    // Show only the first three products
    const limitedProducts = products.slice(0, 3);
+   const limitedRawmaterial = rawMaterials.slice(0, 3);
 
   // Variants for animation
   const containerVariants = {
@@ -121,11 +122,11 @@ const Home = () => {
           viewport={{ once: false, amount: 0.4 }}
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
         >
-          {limitedProducts.map((product, index) => (
-          <motion.div key={index} variants={childVariants}>
-            <Card image={product.image} title={product.title} />
-          </motion.div>
-        ))}
+          {limitedProducts.map((material, index) => (
+            <motion.div key={index} variants={childVariants}>
+              <Card image={material.image} title={material.title} />
+            </motion.div>
+          ))}
         </motion.div>
         <motion.div
           variants={childVariants}
@@ -165,7 +166,7 @@ const Home = () => {
           viewport={{ once: false, amount: 0.4 }}
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
         >
-          {rawMaterials.map((material, index) => (
+          {limitedRawmaterial.map((material, index) => (
             <motion.div key={index} variants={childVariants}>
               <Card image={material.image} title={material.title} />
             </motion.div>

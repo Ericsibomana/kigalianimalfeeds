@@ -4,7 +4,7 @@ import { products, rawMaterials } from "../data/data";
 //motion
 import { motion } from "framer-motion";
 //variants
-import { fadeIn } from "../variants";
+// import { fadeIn } from "../variants";
 
 const Services = () => {
   // Variants for animation
@@ -53,19 +53,15 @@ const Services = () => {
             </p>
           </motion.div>
         </div>
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: false, amount: 0.4 }}
+        <div
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
         >
           {products.map((product, index) => (
-          <motion.div key={index} variants={childVariants}>
+          <div key={index} variants={childVariants}>
             <Card image={product.image} title={product.title} />
-          </motion.div>
+          </div>
         ))}
-        </motion.div>
+        </div>
       
 
         {/* Raw Materials Section */}
@@ -84,19 +80,15 @@ const Services = () => {
             agricultural enterprises in achieving sustainable growth.
           </p>
         </motion.div>
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: false, amount: 0.4 }}
+        <div
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
         >
           {rawMaterials.map((material, index) => (
-            <motion.div key={index} variants={childVariants}>
+            <div key={index} variants={childVariants}>
               <Card image={material.image} title={material.title} />
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 </div>
   )
 }
